@@ -1,0 +1,13 @@
+default:
+  # Outgoing emails configuration (see examples above)
+  email_delivery:
+    delivery_method: :smtp
+  smtp_settings:
+    address: smtp.domain.com
+    port: 465
+    ssl: true
+    enable_starttls_auto: true
+    domain: domain.com
+    authentication: :login
+    user_name: redmine@domain.com
+    password: xxxx

@@ -4,7 +4,9 @@ services:
     image: postgres:latest
     restart: always
     environment:
-      POSTGRES_PASSWORD: passwd
+      - DB_USER=redmine
+      - DB_PASS=password
+      - DB_NAME=redmine_production
 
     volumes:
       - /root/volume-redmine/redmine-postgres:/var/lib/postgresql
@@ -19,7 +21,7 @@ services:
       - TZ=America/Sao_Paulo
 
       - DB_ADAPTER=postgresql
-      - DB_HOST=172.17.0.1
+      - DB_HOST=address
       - DB_PORT=5432
       - DB_USER=redmine
       - DB_PASS=passwd
